@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S24 Seguridad Electrónica | Protección Inteligente en Santander</title>
+    <meta name="description" content="Expertos en cámaras de seguridad, alarmas, control de acceso y video porteros en Bucaramanga y Santander. Protección 24/7.">
+    
+    <!-- Tailwind & Google Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            scroll-behavior: smooth; 
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .page-content { display: none; opacity: 0; }
+        .page-content.active { display: block; animation: fadeIn 0.5s forwards; }
+        
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(10px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+
+        /* Estilo personalizado de Scrollbar */
+        .carousel-track::-webkit-scrollbar { height: 5px; }
+        .carousel-track::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        .carousel-track::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
+
+        .nav-link.active { 
+            color: #2563eb; 
+            border-bottom: 2px solid #2563eb;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+        
+        #mobile-menu {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Header -->
+    <header class="fixed w-full bg-white/80 backdrop-blur-xl shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 h-20 flex justify-between items-center">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="navigate('inicio')">
+                <div class="w-11 h-11 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-200">
+                    <i class="fas fa-shield-alt text-xl"></i>
+                </div>
+                <div>
+                    <span class="block font-extrabold text-xl leading-none tracking-tight">S24</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-blue-600">Seguridad Electrónica</span>
+                </div>
+            </div>
+
+            <nav class="hidden lg:flex items-center space-x-8 font-semibold text-sm">
+                <button onclick="navigate('inicio')" class="nav-link py-2 transition hover:text-blue-600" data-page="inicio">Inicio</button>
+                <button onclick="navigate('productos')" class="nav-link py-2 transition hover:text-blue-600" data-page="productos">Productos</button>
+                <button onclick="navigate('blog')" class="nav-link py-2 transition hover:text-blue-600" data-page="blog">Blog</button>
+                <button onclick="navigate('servicios')" class="nav-link py-2 transition hover:text-blue-600" data-page="servicios">Servicios</button>
+                <button onclick="navigate('contacto')" class="bg-blue-600 text-white px-6 py-2.5 rounded-full hover:bg-blue-700 transition-all shadow-md hover:shadow-blue-200" data-page="contacto">Solicitar Cotización</button>
+            </nav>
+
+            <button id="menu-toggle" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-full bg-slate-100">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-slate-900 z-[70] flex flex-col items-center justify-center space-y-8 text-white opacity-0 pointer-events-none transform scale-95">
+        <button id="menu-close" class="absolute top-6 right-6 w-12 h-12 flex items-center justify-center rounded-full bg-white/10">
+            <i class="fas fa-times text-2xl"></i>
+        </button>
+        <button onclick="navigate('inicio')" class="text-3xl font-bold hover:text-blue-400">Inicio</button>
+        <button onclick="navigate('productos')" class="text-3xl font-bold hover:text-blue-400">Productos</button>
+        <button onclick="navigate('servicios')" class="text-3xl font-bold hover:text-blue-400">Servicios</button>
+        <button onclick="navigate('blog')" class="text-3xl font-bold hover:text-blue-400">Blog</button>
+        <button onclick="navigate('contacto')" class="bg-blue-600 px-10 py-4 rounded-full text-xl font-bold">Contacto</button>
+    </div>
+
+    <main class="pt-20">
+        
+        <!-- SECCIÓN: INICIO (HERO) -->
+        <section id="page-inicio" class="page-content active">
+            <div class="relative min-h-[90vh] flex items-center overflow-hidden hero-gradient text-white">
+                <div class="absolute inset-0">
+                    <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=1600" class="w-full h-full object-cover opacity-30">
+                    <div class="absolute inset-0 bg-gradient-to-r from-slate-900 to-transparent"></div>
+                </div>
+                
+                <div class="container mx-auto px-4 relative z-10">
+                    <div class="max-w-3xl">
+                        <span class="inline-block px-4 py-1.5 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-bold mb-6 uppercase tracking-widest">Confianza & Tecnología</span>
+                        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Su seguridad no descansa, <span class="text-blue-500">nosotros tampoco.</span></h1>
+                        <p class="text-xl text-slate-300 mb-10 leading-relaxed max-w-xl">Instalación y mantenimiento de sistemas de vigilancia avanzados para proteger lo que más importa en Bucaramanga y todo Santander.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="navigate('productos')" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-bold text-lg transition shadow-xl shadow-blue-900/20">Explorar Catálogo</button>
+                            <button onclick="navigate('contacto')" class="bg-white/10 hover:bg-white/20 border border-white/30 px-10 py-4 rounded-xl font-bold text-lg transition backdrop-blur-sm">Agendar Visita Técnica</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Rápidos -->
+            <div class="container mx-auto px-4 -mt-16 relative z-20">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-8 rounded-3xl shadow-xl flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 flex-shrink-0">
+                            <i class="fas fa-microchip text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Tecnología 4K</h3>
+                            <p class="text-slate-500 text-sm">Cámaras de ultra alta definición con visión nocturna a color.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-xl flex items-start gap-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center text-green-600 flex-shrink-0">
+                            <i class="fas fa-mobile-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Control Móvil</h3>
+                            <p class="text-slate-500 text-sm">Monitorea todo desde tu celular en tiempo real desde cualquier lugar.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-xl flex items-start gap-4">
+                        <div class="w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center text-amber-600 flex-shrink-0">
+                            <i class="fas fa-headset text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Soporte 24/7</h3>
+                            <p class="text-slate-500 text-sm">Asistencia técnica inmediata para garantizar tu tranquilidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: PRODUCTOS -->
+        <section id="page-productos" class="page-content py-16 container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div>
+                    <h2 class="text-4xl font-extrabold mb-4">Catálogo de Equipos</h2>
+                    <p class="text-slate-500 max-w-md">Seleccionamos solo las mejores marcas del mercado para garantizar durabilidad y eficiencia.</p>
+                </div>
+                <div class="flex bg-slate-100 p-1.5 rounded-2xl">
+                    <button class="px-6 py-2 bg-white rounded-xl shadow-sm font-bold text-sm">Todos</button>
+                    <button class="px-6 py-2 text-slate-500 font-bold text-sm hover:text-blue-600">Marcas</button>
+                </div>
+            </div>
+
+            <!-- Carruseles de Categorías -->
+            <div class="space-y-12">
+                <div>
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-xl font-bold flex items-center gap-2">
+                            <span class="w-2 h-8 bg-blue-600 rounded-full"></span>
+                            Sistemas de Videovigilancia (CCTV)
+                        </h3>
+                    </div>
+                    <div class="carousel-track flex overflow-x-auto gap-6 pb-6" id="cat-cctv">
+                        <!-- Generado dinámicamente -->
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-xl font-bold flex items-center gap-2">
+                            <span class="w-2 h-8 bg-purple-600 rounded-full"></span>
+                            Alarmas de Intrusión
+                        </h3>
+                    </div>
+                    <div class="carousel-track flex overflow-x-auto gap-6 pb-6" id="cat-alarmas">
+                        <!-- Generado dinámicamente -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERIA DINÁMICA -->
+        <section id="page-galeria" class="page-content py-10 container mx-auto px-4">
+            <button onclick="navigate('productos')" class="mb-8 group flex items-center gap-2 text-blue-600 font-bold">
+                <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition">
+                    <i class="fas fa-arrow-left text-xs"></i>
+                </div>
+                Volver al catálogo
+            </button>
+            <h2 id="gallery-title" class="text-3xl font-extrabold mb-8 capitalize"></h2>
+            <div id="gallery-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+        </section>
+
+        <!-- SECCIÓN: SERVICIOS -->
+        <section id="page-servicios" class="page-content py-20 bg-slate-900 text-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-4xl font-extrabold mb-6 italic">Servicios Profesionales</h2>
+                    <p class="text-slate-400">No solo vendemos equipos; diseñamos soluciones integrales adaptadas a su infraestructura.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition group">
+                        <i class="fas fa-tools text-4xl text-blue-500 mb-6 group-hover:scale-110 transition"></i>
+                        <h4 class="text-xl font-bold mb-4 italic">Instalación Certificada</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">Instalamos cableado estructurado, configuración de redes y puesta a punto de software de monitoreo bajo normas técnicas.</p>
+                    </div>
+                    <div class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition group">
+                        <i class="fas fa-sync-alt text-4xl text-green-500 mb-6 group-hover:rotate-180 transition duration-700"></i>
+                        <h4 class="text-xl font-bold mb-4 italic">Mantenimiento</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">Preventivo y correctivo para que sus cámaras nunca dejen de grabar. Limpieza de lentes, revisión de discos y fuentes.</p>
+                    </div>
+                    <div class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition group">
+                        <i class="fas fa-project-diagram text-4xl text-purple-500 mb-6 group-hover:scale-110 transition"></i>
+                        <h4 class="text-xl font-bold mb-4 italic">Consultoría</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">Evaluamos puntos vulnerables en su propiedad y diseñamos el plano de cobertura óptimo para su presupuesto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: BLOG -->
+        <section id="page-blog" class="page-content py-20 container mx-auto px-4">
+            <h2 class="text-4xl font-extrabold mb-12 text-center">Blog & Consejos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="blog-container">
+                <!-- Se llena con JS para mayor facilidad -->
+            </div>
+        </section>
+
+        <!-- SECCIÓN: CONTACTO -->
+        <section id="page-contacto" class="page-content py-20 container mx-auto px-4">
+            <div class="bg-white rounded-[3rem] shadow-2xl shadow-blue-900/10 overflow-hidden">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="lg:w-1/2 p-12 lg:p-20 bg-blue-600 text-white">
+                        <h2 class="text-4xl font-extrabold mb-8 italic">¡Hablemos!</h2>
+                        <p class="text-blue-100 mb-12 text-lg">Estamos listos para asesorarte en tu próximo proyecto de seguridad en Bucaramanga y el área metropolitana.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center"><i class="fab fa-whatsapp text-xl"></i></div>
+                                <div><p class="text-sm text-blue-200">WhatsApp Directo</p><p class="font-bold text-lg">+57 304 6615865</p></div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center"><i class="fas fa-map-marker-alt text-xl"></i></div>
+                                <div><p class="text-sm text-blue-200">Cobertura</p><p class="font-bold text-lg">Santander, Colombia</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 p-12 lg:p-20">
+                        <form class="space-y-6" onsubmit="event.preventDefault(); alert('Gracias por tu mensaje. Un asesor te contactará pronto.');">
+                            <div>
+                                <label class="block text-sm font-bold mb-2 uppercase text-slate-400">Nombre Completo</label>
+                                <input type="text" placeholder="Ej: Juan Pérez" class="w-full px-6 py-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2 uppercase text-slate-400">¿Qué necesitas proteger?</label>
+                                <select class="w-full px-6 py-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 transition">
+                                    <option>Mi Hogar / Casa</option>
+                                    <option>Local Comercial</option>
+                                    <option>Empresa / Bodega</option>
+                                    <option>Edificio / Conjunto</option>
+                                </select>
+                            </div>
+                            <button class="w-full py-5 bg-slate-900 text-white rounded-2xl font-bold hover:bg-black transition-all shadow-lg">Enviar Solicitud</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal Detalle -->
+    <div id="modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="bg-white rounded-[2.5rem] w-full max-w-xl relative z-10 overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-300">
+            <button onclick="closeModal()" class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-lg text-slate-400 hover:text-black transition">✕</button>
+            <div class="h-72 overflow-hidden">
+                <img id="modal-img" class="w-full h-full object-cover">
+            </div>
+            <div class="p-10">
+                <span id="modal-tag" class="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-[10px] font-bold uppercase rounded-md mb-4">S24 Premium</span>
+                <h3 id="modal-title" class="text-3xl font-extrabold mb-4 italic"></h3>
+                <p id="modal-desc" class="text-slate-500 leading-relaxed mb-8"></p>
+                <div class="flex gap-4">
+                    <a id="whatsapp-btn" target="_blank" class="flex-1 bg-green-500 hover:bg-green-600 text-white py-5 rounded-2xl font-bold flex items-center justify-center gap-3 transition shadow-lg shadow-green-100">
+                        <i class="fab fa-whatsapp text-2xl"></i> Consultar Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón Flotante WhatsApp -->
+    <a href="https://wa.me/573046615865" target="_blank" class="fixed bottom-8 right-8 w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-all z-[60] animate-bounce">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer class="bg-slate-50 border-t py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center text-white"><i class="fas fa-shield-alt"></i></div>
+                    <span class="font-extrabold text-xl italic">S24 Seguridad</span>
+                </div>
+                <div class="flex space-x-6 text-sm font-bold text-slate-400">
+                    <a href="#" class="hover:text-blue-600 transition">Términos</a>
+                    <a href="#" class="hover:text-blue-600 transition">Privacidad</a>
+                    <a href="#" class="hover:text-blue-600 transition">Soporte</a>
+                </div>
+                <p class="text-slate-400 text-sm">© 2024 S24 Seguridad Electrónica. Santander, Colombia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Datos de productos realistas
+        const PRODUCT_DATA = {
+            'cctv': [
+                { id: 'cam1', title: 'Cámara Domo IP 4MP', img: 'https://images.unsplash.com/photo-1551709076-89f2499d383b?w=500', desc: 'Resolución QHD, visión nocturna inteligente y detección de humanos.' },
+                { id: 'cam2', title: 'Cámara Bullet Metálica', img: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=500', desc: 'Ideal para exteriores, resistente al agua IP67 y gran alcance infrarrojo.' },
+                { id: 'cam3', title: 'Kit DVR 4 Canales + HDD', img: 'https://images.unsplash.com/photo-1590483736622-39da8af75bba?w=500', desc: 'Sistema completo con grabación continua y acceso remoto vía App.' },
+                { id: 'cam4', title: 'Cámara Wi-Fi Robotizada', img: 'https://images.unsplash.com/photo-1521233013473-c58550600b80?w=500', desc: 'Giro de 360 grados, audio bidireccional y seguimiento automático.' }
+            ],
+            'alarmas': [
+                { id: 'al1', title: 'Panel Inalámbrico Inteligente', img: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=500', desc: 'Central de alarma con conexión WiFi y GSM para reporte instantáneo al móvil.' },
+                { id: 'al2', title: 'Sensor Movimiento PIR', img: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=500', desc: 'Tecnología anti-mascotas y detección de calor corporal de alta precisión.' },
+                { id: 'al3', title: 'Sirena Exterior de Alta Potencia', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500', desc: '120dB con luz estroboscópica para disuasión inmediata.' }
+            ]
+        };
+
+        const BLOG_POSTS = [
+            { title: 'Por qué instalar cámaras 4K', tag: 'Tecnología', img: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600', desc: 'La diferencia entre reconocer un rostro o ver una mancha borrosa.' },
+            { title: 'Evita robos en tu negocio', tag: 'Consejos', img: 'https://images.unsplash.com/photo-1563013544-824ae14f486d?w=600', desc: '5 estrategias de seguridad electrónica que todo comerciante debe aplicar.' },
+            { title: 'Alarmas vs Cámaras', tag: 'Guía', img: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=600', desc: '¿Cuál instalar primero? Te ayudamos a decidir según tu prioridad.' }
+        ];
+
+        // Inicializar componentes
+        window.onload = () => {
+            renderCarousels();
+            renderBlog();
+        };
+
+        function navigate(pageId) {
+            document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
+            const target = document.getElementById('page-' + pageId);
+            if(target) target.classList.add('active');
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.toggle('active', link.getAttribute('data-page') === pageId);
+            });
+            
+            closeMobileMenu();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function renderCarousels() {
+            const cctvTrack = document.getElementById('cat-cctv');
+            const alarTrack = document.getElementById('cat-alarmas');
+
+            PRODUCT_DATA.cctv.forEach(p => {
+                cctvTrack.innerHTML += createCarouselCard(p, 'cctv');
+            });
+            PRODUCT_DATA.alarmas.forEach(p => {
+                alarTrack.innerHTML += createCarouselCard(p, 'alarmas');
+            });
+        }
+
+        function createCarouselCard(p, cat) {
+            return `
+                <div class="min-w-[280px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer border border-slate-100" onclick="openGallery('${cat}')">
+                    <div class="h-48 overflow-hidden">
+                        <img src="${p.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-2">${p.title}</h4>
+                        <p class="text-slate-400 text-xs line-clamp-2">${p.desc}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderBlog() {
+            const blogCont = document.getElementById('blog-container');
+            BLOG_POSTS.forEach(post => {
+                blogCont.innerHTML += `
+                    <article class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-xl transition cursor-pointer group" onclick="openModal('${post.img}', '${post.title}', '${post.desc}')">
+                        <div class="h-56 overflow-hidden relative">
+                            <span class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold uppercase z-10">${post.tag}</span>
+                            <img src="${post.img}" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        </div>
+                        <div class="p-8">
+                            <h4 class="text-xl font-bold mb-3 group-hover:text-blue-600 transition italic">${post.title}</h4>
+                            <p class="text-slate-500 text-sm mb-6">${post.desc}</p>
+                            <span class="text-blue-600 font-bold text-xs flex items-center gap-2">Leer más <i class="fas fa-arrow-right text-[10px]"></i></span>
+                        </div>
+                    </article>
+                `;
+            });
+        }
+
+        function openGallery(category) {
+            const container = document.getElementById('gallery-container');
+            const title = document.getElementById('gallery-title');
+            container.innerHTML = '';
+            title.innerText = category === 'cctv' ? 'Sistemas de Cámaras' : 'Sistemas de Alarma';
+
+            const products = PRODUCT_DATA[category];
+            products.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition border border-slate-100 p-2 cursor-pointer';
+                card.innerHTML = `
+                    <div class="h-48 rounded-2xl overflow-hidden mb-4">
+                        <img src="${p.img}" class="w-full h-full object-cover">
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h4 class="font-bold text-lg mb-1">${p.title}</h4>
+                        <p class="text-xs text-blue-600 font-bold uppercase tracking-widest mb-3">Ref: S24-70${Math.floor(Math.random()*100)}</p>
+                        <button class="w-full py-3 bg-slate-50 rounded-xl text-xs font-bold hover:bg-blue-600 hover:text-white transition">Ver detalles</button>
+                    </div>
+                `;
+                card.onclick = () => openModal(p.img, p.title, p.desc);
+                container.appendChild(card);
+            });
+
+            navigate('galeria');
+        }
+
+        function openModal(src, title, desc) {
+            const modal = document.getElementById('modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.getElementById('modal-img').src = src;
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-desc').innerText = desc;
+
+            const msg = encodeURIComponent(`Hola S24, me interesa este equipo: ${title}. ¿Podrían darme más información?`);
+            document.getElementById('whatsapp-btn').href = `https://wa.me/573046615865?text=${msg}`;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Menú Móvil
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.onclick = () => {
+            mobileMenu.classList.remove('opacity-0', 'pointer-events-none', 'scale-95');
+            mobileMenu.classList.add('opacity-100', 'pointer-events-auto', 'scale-100');
+        };
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('opacity-0', 'pointer-events-none', 'scale-95');
+            mobileMenu.classList.remove('opacity-100', 'pointer-events-auto', 'scale-100');
+        }
+        menuClose.onclick = closeMobileMenu;
+
+    </script>
+</body>
+</html>
