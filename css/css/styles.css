@@ -1,0 +1,39 @@
+<style>
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            scroll-behavior: smooth; 
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .page-content { display: none; opacity: 0; }
+        .page-content.active { display: block; animation: fadeIn 0.5s forwards; }
+        
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(10px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+
+        /* Estilo personalizado de Scrollbar */
+        .carousel-track::-webkit-scrollbar { height: 5px; }
+        .carousel-track::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        .carousel-track::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
+
+        .nav-link.active { 
+            color: #2563eb; 
+            border-bottom: 2px solid #2563eb;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+        
+        #mobile-menu {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
