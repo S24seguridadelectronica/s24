@@ -1,5 +1,4 @@
- <script>
-        // Datos de productos realistas
+<script type="module">
         const PRODUCT_DATA = {
             'cctv': [
                 { id: 'cam1', title: 'Cámara Domo IP 4MP', img: 'https://images.unsplash.com/photo-1551709076-89f2499d383b?w=500', desc: 'Resolución QHD, visión nocturna inteligente y detección de humanos.' },

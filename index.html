@@ -112,135 +112,16 @@
             </div>
         </section>
 
-        <!-- SECCIÓN: PRODUCTOS -->
-        <section id="page-productos" class="page-content py-16 container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-                <div>
-                    <h2 class="text-4xl font-extrabold mb-4">Catálogo de Equipos</h2>
-                    <p class="text-slate-500 max-w-md">Seleccionamos solo las mejores marcas del mercado para garantizar durabilidad y eficiencia.</p>
-                </div>
-                <div class="flex bg-slate-100 p-1.5 rounded-2xl">
-                    <button class="px-6 py-2 bg-white rounded-xl shadow-sm font-bold text-sm">Todos</button>
-                    <button class="px-6 py-2 text-slate-500 font-bold text-sm hover:text-blue-600">Marcas</button>
-                </div>
-            </div>
+     <div id="productos-container"></div>
 
-            <!-- Carruseles de Categorías -->
-            <div class="space-y-12">
-                <div>
-                    <div class="flex items-center justify-between mb-6">
-                        <h3 class="text-xl font-bold flex items-center gap-2">
-                            <span class="w-2 h-8 bg-blue-600 rounded-full"></span>
-                            Sistemas de Videovigilancia (CCTV)
-                        </h3>
-                    </div>
-                    <div class="carousel-track flex overflow-x-auto gap-6 pb-6" id="cat-cctv">
-                        <!-- Generado dinámicamente -->
-                    </div>
-                </div>
 
-                <div>
-                    <div class="flex items-center justify-between mb-6">
-                        <h3 class="text-xl font-bold flex items-center gap-2">
-                            <span class="w-2 h-8 bg-purple-600 rounded-full"></span>
-                            Alarmas de Intrusión
-                        </h3>
-                    </div>
-                    <div class="carousel-track flex overflow-x-auto gap-6 pb-6" id="cat-alarmas">
-                        <!-- Generado dinámicamente -->
-                    </div>
-                </div>
-            </div>
-        </section>
+       <div id="servicios-container"></div>
 
-        <!-- GALERIA DINÁMICA -->
-        <section id="page-galeria" class="page-content py-10 container mx-auto px-4">
-            <button onclick="navigate('productos')" class="mb-8 group flex items-center gap-2 text-blue-600 font-bold">
-                <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition">
-                    <i class="fas fa-arrow-left text-xs"></i>
-                </div>
-                Volver al catálogo
-            </button>
-            <h2 id="gallery-title" class="text-3xl font-extrabold mb-8 capitalize"></h2>
-            <div id="gallery-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-        </section>
+       <div id="blog-container-load"></div>
 
-        <!-- SECCIÓN: SERVICIOS -->
-        <section id="page-servicios" class="page-content py-20 bg-slate-900 text-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-4xl font-extrabold mb-6 italic">Servicios Profesionales</h2>
-                    <p class="text-slate-400">No solo vendemos equipos; diseñamos soluciones integrales adaptadas a su infraestructura.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition group">
-                        <i class="fas fa-tools text-4xl text-blue-500 mb-6 group-hover:scale-110 transition"></i>
-                        <h4 class="text-xl font-bold mb-4 italic">Instalación Certificada</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed">Instalamos cableado estructurado, configuración de redes y puesta a punto de software de monitoreo bajo normas técnicas.</p>
-                    </div>
-                    <div class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition group">
-                        <i class="fas fa-sync-alt text-4xl text-green-500 mb-6 group-hover:rotate-180 transition duration-700"></i>
-                        <h4 class="text-xl font-bold mb-4 italic">Mantenimiento</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed">Preventivo y correctivo para que sus cámaras nunca dejen de grabar. Limpieza de lentes, revisión de discos y fuentes.</p>
-                    </div>
-                    <div class="p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition group">
-                        <i class="fas fa-project-diagram text-4xl text-purple-500 mb-6 group-hover:scale-110 transition"></i>
-                        <h4 class="text-xl font-bold mb-4 italic">Consultoría</h4>
-                        <p class="text-slate-400 text-sm leading-relaxed">Evaluamos puntos vulnerables en su propiedad y diseñamos el plano de cobertura óptimo para su presupuesto.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+       <div id="contacto-container"></div>
 
-        <!-- SECCIÓN: BLOG -->
-        <section id="page-blog" class="page-content py-20 container mx-auto px-4">
-            <h2 class="text-4xl font-extrabold mb-12 text-center">Blog & Consejos</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="blog-container">
-                <!-- Se llena con JS para mayor facilidad -->
-            </div>
-        </section>
-
-        <!-- SECCIÓN: CONTACTO -->
-        <section id="page-contacto" class="page-content py-20 container mx-auto px-4">
-            <div class="bg-white rounded-[3rem] shadow-2xl shadow-blue-900/10 overflow-hidden">
-                <div class="flex flex-col lg:flex-row">
-                    <div class="lg:w-1/2 p-12 lg:p-20 bg-blue-600 text-white">
-                        <h2 class="text-4xl font-extrabold mb-8 italic">¡Hablemos!</h2>
-                        <p class="text-blue-100 mb-12 text-lg">Estamos listos para asesorarte en tu próximo proyecto de seguridad en Bucaramanga y el área metropolitana.</p>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center"><i class="fab fa-whatsapp text-xl"></i></div>
-                                <div><p class="text-sm text-blue-200">WhatsApp Directo</p><p class="font-bold text-lg">+57 304 6615865</p></div>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center"><i class="fas fa-map-marker-alt text-xl"></i></div>
-                                <div><p class="text-sm text-blue-200">Cobertura</p><p class="font-bold text-lg">Santander, Colombia</p></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:w-1/2 p-12 lg:p-20">
-                        <form class="space-y-6" onsubmit="event.preventDefault(); alert('Gracias por tu mensaje. Un asesor te contactará pronto.');">
-                            <div>
-                                <label class="block text-sm font-bold mb-2 uppercase text-slate-400">Nombre Completo</label>
-                                <input type="text" placeholder="Ej: Juan Pérez" class="w-full px-6 py-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 transition">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-bold mb-2 uppercase text-slate-400">¿Qué necesitas proteger?</label>
-                                <select class="w-full px-6 py-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 transition">
-                                    <option>Mi Hogar / Casa</option>
-                                    <option>Local Comercial</option>
-                                    <option>Empresa / Bodega</option>
-                                    <option>Edificio / Conjunto</option>
-                                </select>
-                            </div>
-                            <button class="w-full py-5 bg-slate-900 text-white rounded-2xl font-bold hover:bg-black transition-all shadow-lg">Enviar Solicitud</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        
     </main>
 
     <!-- Modal Detalle -->

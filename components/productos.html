@@ -1,0 +1,52 @@
+ <!-- SECCIÓN: PRODUCTOS -->
+        <section id="page-productos" class="page-content py-16 container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div>
+                    <h2 class="text-4xl font-extrabold mb-4">Catálogo de Equipos</h2>
+                    <p class="text-slate-500 max-w-md">Seleccionamos solo las mejores marcas del mercado para garantizar durabilidad y eficiencia.</p>
+                </div>
+                <div class="flex bg-slate-100 p-1.5 rounded-2xl">
+                    <button class="px-6 py-2 bg-white rounded-xl shadow-sm font-bold text-sm">Todos</button>
+                    <button class="px-6 py-2 text-slate-500 font-bold text-sm hover:text-blue-600">Marcas</button>
+                </div>
+            </div>
+
+            <!-- Carruseles de Categorías -->
+            <div class="space-y-12">
+                <div>
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-xl font-bold flex items-center gap-2">
+                            <span class="w-2 h-8 bg-blue-600 rounded-full"></span>
+                            Sistemas de Videovigilancia (CCTV)
+                        </h3>
+                    </div>
+                    <div class="carousel-track flex overflow-x-auto gap-6 pb-6" id="cat-cctv">
+                        <!-- Generado dinámicamente -->
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-xl font-bold flex items-center gap-2">
+                            <span class="w-2 h-8 bg-purple-600 rounded-full"></span>
+                            Alarmas de Intrusión
+                        </h3>
+                    </div>
+                    <div class="carousel-track flex overflow-x-auto gap-6 pb-6" id="cat-alarmas">
+                        <!-- Generado dinámicamente -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERIA DINÁMICA -->
+        <section id="page-galeria" class="page-content py-10 container mx-auto px-4">
+            <button onclick="navigate('productos')" class="mb-8 group flex items-center gap-2 text-blue-600 font-bold">
+                <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition">
+                    <i class="fas fa-arrow-left text-xs"></i>
+                </div>
+                Volver al catálogo
+            </button>
+            <h2 id="gallery-title" class="text-3xl font-extrabold mb-8 capitalize"></h2>
+            <div id="gallery-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+        </section>
