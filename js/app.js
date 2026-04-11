@@ -78,11 +78,15 @@ window.addEventListener("load", () => {
 // NAV
 function navigate(pageId) {
   document.querySelectorAll(".page-content").forEach((p) => {
+    p.classList.add("hidden");   // OCULTA todas
     p.classList.remove("active");
   });
 
   const target = document.getElementById("page-" + pageId);
-  if (target) target.classList.add("active");
+  if (target) {
+    target.classList.remove("hidden"); // MUESTRA la correcta
+    target.classList.add("active");
+  }
 
   closeMobileMenu();
   window.scrollTo({ top: 0, behavior: "smooth" });
